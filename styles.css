@@ -35,12 +35,6 @@ header .navbar {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s, text-decoration 0.3s;
-}
-
-.nav-links li a:hover {
-    color: #f4f4f4;
-    text-decoration: underline;
 }
 
 .hero-section {
@@ -71,25 +65,14 @@ header .navbar {
     position: relative;
     z-index: 1;
     padding: 20px;
-    transition: transform 0.5s ease-in-out;
 }
 
 .hero-content h1 {
     font-size: 3rem;
-    transition: transform 0.5s ease-in-out;
 }
 
 .hero-content p {
     font-size: 1.5rem;
-    transition: transform 0.5s ease-in-out;
-}
-
-.hero-section:hover .hero-content h1 {
-    transform: scale(1.05);
-}
-
-.hero-section:hover .hero-content p {
-    transform: scale(1.02);
 }
 
 .container {
@@ -121,14 +104,12 @@ header .navbar {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     flex: 1 1 calc(50% - 20px);
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, border 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .highlight-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
 }
 
 h2, h3 {
@@ -145,25 +126,6 @@ ul {
     text-align: center;
     padding: 1rem;
     margin-top: 50px;
-}
-
-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-button:hover {
-    background-color: #555;
-    transform: scale(1.05);
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 @media (max-width: 768px) {
