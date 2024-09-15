@@ -16,25 +16,32 @@ header {
 
 header .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1100px;
     margin: auto;
 }
 
-.nav-links {
+.navbar ul {
     list-style: none;
     display: flex;
+    padding: 0;
+    margin: 0;
 }
 
-.nav-links li {
+.navbar li {
     margin-left: 20px;
 }
 
-.nav-links li a {
+.navbar a {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #00bcd4;
 }
 
 .hero-section {
@@ -52,6 +59,8 @@ header .navbar {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    transform: translateZ(0);
+    background: #000;
 }
 
 .video-bg img,
@@ -65,6 +74,14 @@ header .navbar {
     position: relative;
     z-index: 1;
     padding: 20px;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.hero-content.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero-content h1 {
@@ -128,6 +145,7 @@ ul {
     margin-top: 50px;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2rem;
@@ -139,5 +157,35 @@ ul {
 
     .highlight-box {
         flex: 1 1 100%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+}
+
+/* Parallax Effect */
+.parallax {
+    background-image: url('assets/background-parallax.jpg');
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
     }
 }
