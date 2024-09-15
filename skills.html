@@ -6,8 +6,23 @@
     <title>Shri Hari's Skills</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="app.js"></script>
+    <script>
+        // JavaScript to load the navigation bar
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('navbar.html')  // Ensure 'navbar.html' is in the same folder
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.log("Error loading navbar:", error));
+        });
+    </script>
 </head>
 <body>
+
+      <!-- Placeholder where navbar will be injected -->
+    <div id="navbar"></div>
+    
     <!-- Hero Section with Background Video -->
     <section class="hero-section">
         <div class="video-bg">
