@@ -17,7 +17,7 @@
             .catch(error => console.log("Error loading navbar:", error));
         });
     </script>
-    </head>
+</head>
 <body>
 
     <!-- Placeholder where navbar will be injected -->
@@ -26,7 +26,7 @@
     <!-- Hero Section with Background Video -->
     <section class="hero-section">
         <div class="video-bg">
-            <img src="fallback.jpg" class="video-bg-fallback" alt="Background Image">
+            <img src="assets/fallback.jpg" class="video-bg-fallback" alt="Background Image">
             <video autoplay muted loop id="bg-video" playsinline preload="metadata">
                 <source src="video 2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -40,51 +40,55 @@
 
     <!-- About Me Content -->
     <section class="about-section">
-        <div class="about-content">
-            <h2>Professional Summary</h2>
-            <p>I am an enthusiastic and result-oriented Test Engineer with over two years of professional experience in network and security testing. My expertise spans across product testing for telecom devices and software testing for complex network management systems. With a strong focus on system performance, reliability, and security, I have worked on projects involving Nokia telecom devices and software suites like WS-NOC (Wave Suite Network Operation Center) and NFM-T (Network Functions Manager Transport).</p>
-        </div>
-
-        <div class="about-details">
-            <h2>Key Areas of Expertise</h2>
-            <div class="highlight-box">
-                <h3>Product Testing (Nokia Telecom Devices – 1830 PSI-CL, 1830 PSI-M)</h3>
-                <ul>
-                    <li>Functional testing to ensure device stability and performance.</li>
-                    <li>Performance and stress testing under real-world conditions.</li>
-                    <li>Compatibility testing with network components for seamless integration.</li>
-                    <li>Verifying traffic management, bandwidth allocation, and scalability.</li>
-                </ul>
+        <div class="container">
+            <div class="about-content">
+                <h2>Professional Summary</h2>
+                <p>I am an enthusiastic and result-oriented Test Engineer with over two years of professional experience in network and security testing. My expertise spans across product testing for telecom devices and software testing for complex network management systems. With a strong focus on system performance, reliability, and security, I have worked on projects involving Nokia telecom devices and software suites like WS-NOC (Wave Suite Network Operation Center) and NFM-T (Network Functions Manager Transport).</p>
             </div>
 
-            <div class="highlight-box">
-                <h3>Software Testing (WS-NOC & NFM-T)</h3>
-                <h4>Wave Suite Network Operation Center (WS-NOC)</h4>
+            <div class="about-details">
+                <h2>Key Areas of Expertise</h2>
+                <div class="expertise-container">
+                    <div class="highlight-box">
+                        <h3>Product Testing (Nokia Telecom Devices – 1830 PSI-CL, 1830 PSI-M)</h3>
+                        <ul>
+                            <li>Functional testing to ensure device stability and performance.</li>
+                            <li>Performance and stress testing under real-world conditions.</li>
+                            <li>Compatibility testing with network components for seamless integration.</li>
+                            <li>Verifying traffic management, bandwidth allocation, and scalability.</li>
+                        </ul>
+                    </div>
+
+                    <div class="highlight-box">
+                        <h3>Software Testing (WS-NOC & NFM-T)</h3>
+                        <h4>Wave Suite Network Operation Center (WS-NOC)</h4>
+                        <ul>
+                            <li>Real-time network performance monitoring with Grafana integration.</li>
+                            <li>Load testing and scalability tests for large-scale deployments.</li>
+                            <li>Ensuring communication between devices and WS-NOC platform.</li>
+                        </ul>
+
+                        <h4>Network Functions Manager Transport (NFM-T)</h4>
+                        <ul>
+                            <li>Testing high-availability setups and ensuring system resilience.</li>
+                            <li>End-to-end functional testing of NFM-T’s transport network management.</li>
+                            <li>Creating test strategies, customer demonstrations, and EPIC testing.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>Key Attributes</h2>
                 <ul>
-                    <li>Real-time network performance monitoring with Grafana integration.</li>
-                    <li>Load testing and scalability tests for large-scale deployments.</li>
-                    <li>Ensuring communication between devices and WS-NOC platform.</li>
+                    <li><strong>Telecom Product Testing Expertise:</strong> Specialize in testing high-performance Nokia devices like the 1830 PSI-CL/PSI-M for telecom networks.</li>
+                    <li><strong>In-depth Software Testing:</strong> Experience in testing WS-NOC and NFM-T systems for large-scale network management.</li>
+                    <li><strong>Automation and CI/CD Integration:</strong> Automate tests within CI/CD pipelines using Jenkins and Git for rapid software delivery.</li>
+                    <li><strong>Security and Network Testing:</strong> A security-first approach to network configurations and vulnerability assessments.</li>
                 </ul>
 
-                <h4>Network Functions Manager Transport (NFM-T)</h4>
-                <ul>
-                    <li>Testing high-availability setups and ensuring system resilience.</li>
-                    <li>End-to-end functional testing of NFM-T’s transport network management.</li>
-                    <li>Creating test strategies, customer demonstrations, and EPIC testing.</li>
-                </ul>
+                <h2>Industry Relevance</h2>
+                <p><strong>Telecom and Network Infrastructure:</strong> Expertise in testing Nokia devices ensures high-speed data transmission and reliability for expanding telecom networks.</p>
+                <p><strong>Software Testing for Network Management:</strong> Extensive experience with WS-NOC and NFM-T aligns with the growing need for efficient network operations management systems in the telecom industry.</p>
             </div>
-
-            <h2>Key Attributes</h2>
-            <ul>
-                <li><strong>Telecom Product Testing Expertise:</strong> Specialize in testing high-performance Nokia devices like the 1830 PSI-CL/PSI-M for telecom networks.</li>
-                <li><strong>In-depth Software Testing:</strong> Experience in testing WS-NOC and NFM-T systems for large-scale network management.</li>
-                <li><strong>Automation and CI/CD Integration:</strong> Automate tests within CI/CD pipelines using Jenkins and Git for rapid software delivery.</li>
-                <li><strong>Security and Network Testing:</strong> A security-first approach to network configurations and vulnerability assessments.</li>
-            </ul>
-
-            <h2>Industry Relevance</h2>
-            <p><strong>Telecom and Network Infrastructure:</strong> Expertise in testing Nokia devices ensures high-speed data transmission and reliability for expanding telecom networks.</p>
-            <p><strong>Software Testing for Network Management:</strong> Extensive experience with WS-NOC and NFM-T aligns with the growing need for efficient network operations management systems in the telecom industry.</p>
         </div>
     </section>
 
