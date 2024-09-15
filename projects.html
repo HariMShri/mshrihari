@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Hari's Projects</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script defer src="assets/app.js"></script>
+</head>
+<body>
+    <!-- Hero Section with Background Video -->
+    <section class="hero-section">
+        <div class="video-bg">
+            <img src="assets/fallback.jpg" class="video-bg-fallback" alt="Background Image">
+            <video autoplay muted loop id="bg-video" playsinline preload="metadata">
+                <source src="assets/video/video 4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-content">
+            <h1>Projects</h1>
+            <p>Explore the Projects I’ve Worked On</p>
+        </div>
+    </section>
+
+    <!-- Include Global Navigation -->
+    <?php include 'navbar.html'; ?>
+
+    <!-- Projects Tiles Section -->
+    <section class="tiles-section">
+        <div class="tile fade-in">
+            <h2>Nokia NFM-T NNA Application</h2>
+            <p>Managed the Nokia NFM-T project, ensuring successful release cycles and customer demonstrations.</p>
+        </div>
+        <div class="tile fade-in">
+            <h2>SN-10 NMS Submarine Network</h2>
+            <p>Contributed to the initial setup and testing of the SN-10 NMS for submarine networks.</p>
+        </div>
+        <div class="tile fade-in">
+            <h2>Nokia WS-NOC Application</h2>
+            <p>Supported WS-NOC, ensuring seamless network operations and monitoring.</p>
+        </div>
+        <div class="tile fade-in">
+            <h2>T-API Network</h2>
+            <p>Worked on the initial setup and configuration of the T-API network.</p>
+        </div>
+    </section>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>

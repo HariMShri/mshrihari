@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Shri Hari</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script defer src="assets/app.js"></script>
+</head>
+<body>
+    <!-- Hero Section with Background Video -->
+    <section class="hero-section">
+        <div class="video-bg">
+            <img src="assets/fallback.jpg" class="video-bg-fallback" alt="Background Image">
+            <video autoplay muted loop id="bg-video" playsinline preload="metadata">
+                <source src="assets/video/video 2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-content">
+            <h1>About Me</h1>
+            <p>Test Engineer | Network & Security Specialist</p>
+        </div>
+    </section>
+
+    <!-- Include Global Navigation -->
+    <?php include 'navbar.html'; ?>
+
+    <!-- About Me Content -->
+    <section class="about-section">
+        <div class="about-content">
+            <h2>Professional Summary</h2>
+            <p>I am a highly motivated and adaptable Test Engineer with expertise in network and security. My goal is to deliver quality results in fast-paced environments while embracing challenges and new learning opportunities. I strive to bring innovative ideas to help organizations grow and develop, leveraging my skills in networking, security, and system management.</p>
+        </div>
+
+        <div class="about-details">
+            <h2>Key Skills</h2>
+            <ul>
+                <li>Operating Systems: Windows Server, Linux (Ubuntu, CentOS)</li>
+                <li>Networking: TCP/IP, DNS, DHCP, VPN, VLANs</li>
+                <li>Security: Firewall configuration, security patches</li>
+                <li>Virtualization: VMware, Hyper-V</li>
+                <li>Tools: GIT, Jenkins, Eclipse, SQL Developer</li>
+            </ul>
+        </div>
+    </section>
+    
+    <script src="assets/app.js"></script>
+</body>
+</html>

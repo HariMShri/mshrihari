@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Shri Hari</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script defer src="assets/app.js"></script>
+</head>
+<body>
+    <!-- Hero Section with Background Video -->
+    <section class="hero-section">
+        <div class="video-bg">
+            <img src="assets/fallback.jpg" class="video-bg-fallback" alt="Background Image">
+            <video autoplay muted loop id="bg-video" playsinline preload="metadata">
+                <source src="assets/video/background.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-content">
+            <h1>Contact Me</h1>
+            <p>Get in Touch with Shri Hari</p>
+        </div>
+    </section>
+
+    <!-- Include Global Navigation -->
+    <?php include 'navbar.html'; ?>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <form action="#" method="POST" class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+    </section>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Hari's Skills</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script defer src="assets/app.js"></script>
+</head>
+<body>
+    <!-- Hero Section with Background Video -->
+    <section class="hero-section">
+        <div class="video-bg">
+            <img src="assets/fallback.jpg" class="video-bg-fallback" alt="Background Image">
+            <video autoplay muted loop id="bg-video" playsinline preload="metadata">
+                <source src="assets/video/video 3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-content">
+            <h1>Skills</h1>
+            <p>Technologies I Specialize In</p>
+        </div>
+    </section>
+
+    <!-- Include Global Navigation -->
+    <?php include 'navbar.html'; ?>
+
+    <!-- Skills Tiles Section -->
+    <section class="tiles-section">
+        <div class="tile fade-in">
+            <h2>Operating Systems</h2>
+            <p>Windows Server (all versions), Linux (Ubuntu, CentOS)</p>
+        </div>
+        <div class="tile fade-in">
+            <h2>Networking</h2>
+            <p>TCP/IP, DNS, DHCP, VPN, VLANs</p>
+        </div>
+        <div class="tile fade-in">
+            <h2>Security</h2>
+            <p>Firewall configuration, security patches, antivirus management</p>
+        </div>
+        <div class="tile fade-in">
+            <h2>Virtualization</h2>
+            <p>VMware, Hyper-V</p>
+        </div>
+        <div class="tile fade-in">
+            <h2>Tools</h2>
+            <p>GIT, Jenkins, Eclipse, Swagger-UI, SQL Developer</p>
+        </div>
+    </section>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>
