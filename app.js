@@ -1,20 +1,10 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('.nav-links a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
 document.addEventListener('DOMContentLoaded', () => {
     const heroContent = document.querySelector('.hero-content');
     const bgVideo = document.getElementById('bg-video');
 
-    // Ensure hero content fades in smoothly
+    // Show hero content with animation
     window.addEventListener('load', () => {
-        heroContent.style.opacity = '1';
-        heroContent.style.transform = 'translateY(0)';
+        heroContent.classList.add('show');
     });
 
     // Lazy-load video for optimization
