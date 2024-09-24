@@ -37,32 +37,3 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('navbar').innerHTML = '<p>Navbar could not be loaded</p>';
     });
 });
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contact-form');
-
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        
-        const formData = new FormData(form);
-        
-        fetch('submit_form.php', {
-            method: 'POST',
-            body: formData,
-        })
-        .then(response => response.json())
-        .then(data => {
-            const feedback = document.querySelector('.form-feedback');
-            if (data.status === 'success') {
-                feedback.textContent = data.message;
-                feedback.classList.add('success');
-                form.reset(); // Clear the form
-            } else {
-                feedback.textContent = data.message;
-                feedback.classList.add('error');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-    });
-});
