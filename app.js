@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Fade-in effect for tiles
-   // const tiles = document.querySelectorAll('.tile');
-    //tiles.forEach((tile, index) => {
-      //  setTimeout(() => {
-        //    tile.classList.add('fade-in');
-        //}, 300 * index); // Staggered fade-in
-   // });
+    const tiles = document.querySelectorAll('.tile');
+    tiles.forEach((tile, index) => {
+        setTimeout(() => {
+            tile.classList.add('fade-in');
+        }, 300 * index); // Staggered fade-in
+    });
 
      tiles.forEach(tile => {
         tile.addEventListener('click', () => {
