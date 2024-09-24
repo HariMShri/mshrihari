@@ -3,66 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Shri Hari. Fill out the form to contact me.">
     <title>Contact Shri Hari</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="app.js"></script>
-   <script>
-        // JavaScript to load the navigation bar
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('navbar.html')  // Ensure 'navbar.html' is in the same folder
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-            })
-            .catch(error => console.log("Error loading navbar:", error));
-        });
-    </script>
+    <script defer src="form-validation.js"></script> <!-- Form validation script -->
 </head>
 <body>
 
-      <!-- Placeholder where navbar will be injected -->
+    <!-- Navbar -->
     <div id="navbar"></div>
-    
-    <!-- Hero Section with Background Video -->
+
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="video-bg">
-            <img src="fallback.jpg" class="video-bg-fallback" alt="Background Image">
+            <img src="fallback.jpg" class="video-bg-fallback" alt="Fallback Image">
             <video autoplay muted loop id="bg-video" playsinline preload="metadata">
-                <source src="video 6.mp4" type="video/mp4">
+                <source src="video 5.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
         <div class="hero-content">
             <h1>Contact Me</h1>
-            <p>Get in Touch with Shri Hari</p>
+            <p>Feel free to reach out for project collaborations, inquiries, or consultations.</p>
         </div>
     </section>
 
-    <!-- Include Global Navigation -->
-    <?php include 'navbar.html'; ?>
-
     <!-- Contact Form Section -->
     <section class="contact-section">
-        <form action="#" method="POST" class="contact-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
+        <div class="container">
+            <h2>Get in Touch</h2>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <!-- Contact Form -->
+            <form id="contact-form" action="submit_form.php" method="POST" novalidate>
+                <!-- Name -->
+                <label for="name">Your Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name" aria-required="true">
+                <span class="error" aria-live="polite"></span>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+                <!-- Email -->
+                <label for="email">Your Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email" aria-required="true">
+                <span class="error" aria-live="polite"></span>
 
-            <button type="submit" class="cta-btn">Send Message</button>
-        </form>
+                <!-- Subject -->
+                <label for="subject">Subject <span class="required">*</span></label>
+                <input type="text" id="subject" name="subject" required placeholder="Enter the subject" aria-required="true">
+                <span class="error" aria-live="polite"></span>
+
+                <!-- Message -->
+                <label for="message">Your Message <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="6" required placeholder="Write your message here..." aria-required="true"></textarea>
+                <span class="error" aria-live="polite"></span>
+
+                <!-- Optional CAPTCHA (for spam prevention) -->
+                <div class="captcha-container">
+                    <!-- You can integrate services like reCAPTCHA here -->
+                    <label for="captcha">Prove you're not a robot:</label>
+                    <input type="text" id="captcha" name="captcha" placeholder="Type the code here">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="cta-btn" aria-label="Submit the contact form">Send Message</button>
+
+                <!-- Success/Failure Message -->
+                <p class="form-feedback" aria-live="polite" role="alert"></p>
+            </form>
+
+            <!-- Mailto Fallback for No-JS Users -->
+            <p>If the form doesn't work, send me an email at: 
+                <a href="mailto:shrihari@example.com">shrihari@example.com</a>
+            </p>
+        </div>
     </section>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="footer">
         <p>© 2024 Shri Hari Portfolio</p>
     </footer>
 
+    <script>
+        // Include real-time form validation or handle post-submission feedback here.
+    </script>
 
-    <script src="app.js"></script>
 </body>
 </html>
