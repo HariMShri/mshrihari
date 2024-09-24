@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const popup = document.getElementById(popupId);
             if (popup) {
                 popup.classList.add('active');
+                trapFocus(popup);  // Trap focus when popup is opened
             }
         });
     });
@@ -53,7 +54,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 popup.classList.remove('active');
             }
         });
+
+        // Close popup on Escape key press
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && popup.classList.contains('active')) {
+                popup.classList.remove('active');
+            }
+        });
     });
+
+    // Focus trapping function
+    function trapFocus(popup) {
+        const focusableElements = popup.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        firstElement.focus();
+
+        popup.addEventListener('keydown', (e) => {
+            const isTabPressed = e.key === 'Tab';
+
+            if (!isTabPressed) {
+                return;
+            }
+
+            if (e.shiftKey) {
+                // Shift + Tab: if focus is on the first element, move to the last element
+                if (document.activeElement === firstElement) {
+                    e.preventDefault();
+                    lastElement.focus();
+                }
+            } else {
+                // Tab: if focus is on the last element, move to the first element
+                if (document.activeElement === lastElement) {
+                    e.preventDefault();
+                    firstElement.focus();
+                }
+            }
+        });
+    }
 });
 
 // Fetch the navigation bar and inject it into the document
