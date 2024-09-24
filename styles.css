@@ -11,10 +11,8 @@
 
 /* General Styles */
 body {
+    body {
     font-family: 'Poppins', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
     background-color: #000;
     color: #fff;
     scroll-behavior: smooth;
