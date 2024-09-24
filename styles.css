@@ -225,15 +225,6 @@ body {
     background-color: #0056b3;
 }
 
-/* Footer */
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 50px;
-}
-
 /* Validation Error Styles */
 .error-message {
     color: #ff4c4c;
