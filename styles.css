@@ -146,6 +146,7 @@ body {
     opacity: 0;
     animation: fadeInUp 1.5s ease-in-out forwards;
     animation-delay: 0.5s;
+    will-change: transform, opacity;
 }
 
 .tile h2 {
