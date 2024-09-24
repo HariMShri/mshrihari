@@ -5,9 +5,16 @@
     box-sizing: border-box;
 }
 
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 400
+
+
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
     background-color: #000;
     color: #fff;
     scroll-behavior: smooth;
