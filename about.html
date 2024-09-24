@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,23 +11,24 @@
         // JavaScript to load the navigation bar
         document.addEventListener('DOMContentLoaded', () => {
             fetch('navbar.html')  // Ensure 'navbar.html' is in the same folder
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar').innerHTML = data;
-            })
-            .catch(error => console.log("Error loading navbar:", error));
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                })
+                .catch(error => console.log("Error loading navbar:", error));
         });
     </script>
 </head>
+
 <body>
 
     <!-- Placeholder for the navigation bar -->
     <div id="navbar"></div>
 
     <!-- Hero Section with Background Video -->
-    <section class="hero-section">
+    <header class="hero-section" role="banner">
         <div class="video-bg">
-            <img src="assets/fallback.jpg" class="video-bg-fallback" alt="Background Image">
+            <img src="assets/fallback.jpg" class="video-bg-fallback" alt="Background Image" loading="lazy">
             <video autoplay muted loop id="bg-video" playsinline preload="metadata">
                 <source src="video 2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -36,126 +38,87 @@
             <h1>About Me</h1>
             <p>Test Engineer | Network & Security Specialist</p>
         </div>
+    </header>
+
+    <!-- Tiles Section with Popups -->
+    <section class="tiles-section">
+        <!-- Tile for Professional Summary -->
+        <div class="tile fade-in" data-popup="popup-summary">
+            <h2>Professional Summary</h2>
+        </div>
+
+        <!-- Tile for Key Areas of Expertise -->
+        <div class="tile fade-in" data-popup="popup-expertise">
+            <h2>Key Areas of Expertise</h2>
+        </div>
+
+        <!-- Tile for Software Testing -->
+        <div class="tile fade-in" data-popup="popup-software">
+            <h2>Software Testing</h2>
+        </div>
+
+        <!-- Tile for Key Attributes -->
+        <div class="tile fade-in" data-popup="popup-attributes">
+            <h2>Key Attributes</h2>
+        </div>
+
+        <!-- Tile for Industry Relevance -->
+        <div class="tile fade-in" data-popup="popup-relevance">
+            <h2>Industry Relevance</h2>
+        </div>
     </section>
 
-    <!-- About Me Content Section -->
-  <!--  <section class="tiles-section">
-        <div class="tile fade-in">
-            <h2>Professional Summary</h2>
+    <!-- Popup Overlays (Hidden by default) -->
+    <div class="popup-overlay" id="popup-summary" role="dialog" aria-labelledby="popup-summary-title" aria-modal="true">
+        <div class="popup-content">
+            <h2 id="popup-summary-title">Professional Summary</h2>
             <p>I am an enthusiastic and result-oriented Test Engineer with over three years of professional experience in network and security testing. My expertise spans across product testing for telecom devices and software testing for complex network management systems.</p>
+            <button class="close-popup" aria-label="Close">Close</button>
         </div>
+    </div>
 
-        <div class="tile fade-in">
-            <h2>Key Areas of Expertise</h2>
-            <h3>Product Testing (Nokia Telecom Devices)</h3>
+    <div class="popup-overlay" id="popup-expertise" role="dialog" aria-labelledby="popup-expertise-title" aria-modal="true">
+        <div class="popup-content">
+            <h2 id="popup-expertise-title">Key Areas of Expertise</h2>
+            <p>Functional and performance testing for Nokia devices...</p>
+            <button class="close-popup" aria-label="Close">Close</button>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-software" role="dialog" aria-labelledby="popup-software-title" aria-modal="true">
+        <div class="popup-content">
+            <h2 id="popup-software-title">Software Testing</h2>
+            <p>Monitoring real-time network performance with Grafana...</p>
+            <button class="close-popup" aria-label="Close">Close</button>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popup-attributes" role="dialog" aria-labelledby="popup-attributes-title" aria-modal="true">
+        <div class="popup-content">
+            <h2 id="popup-attributes-title">Key Attributes</h2>
             <ul>
                 <li>Functional and performance testing for Nokia devices (1830 PSI-CL, 1830 PSI-M).</li>
                 <li>Testing network components for seamless integration and scalability.</li>
                 <li>Ensuring traffic management and bandwidth allocation stability.</li>
             </ul>
+            <button class="close-popup" aria-label="Close">Close</button>
         </div>
+    </div>
 
-        <div class="tile fade-in">
-            <h3>Software Testing (WS-NOC & NFM-T)</h3>
-            <ul>
-                <li>Monitoring real-time network performance with Grafana integration.</li>
-                <li>Load and scalability testing for large-scale network deployments.</li>
-                <li>Testing high-availability setups for NFM-T’s transport network management.</li>
-            </ul>
-        </div>
-
-        <div class="tile fade-in">
-            <h2>Key Attributes</h2>
-            <ul>
-                <li><strong>Telecom Product Testing Expertise:</strong> Specialized in testing high-performance Nokia devices.</li>
-                <li><strong>Software Testing:</strong> Experience with WS-NOC and NFM-T for large-scale network management.</li>
-                <li><strong>Automation & CI/CD:</strong> Skilled in Jenkins and Git for test automation within CI/CD pipelines.</li>
-                <li><strong>Security-First Approach:</strong> Prioritize security and vulnerability assessments in network testing.</li>
-            </ul>
-        </div>
-
-        <div class="tile fade-in">
-            <h2>Industry Relevance</h2>
+    <div class="popup-overlay" id="popup-relevance" role="dialog" aria-labelledby="popup-relevance-title" aria-modal="true">
+        <div class="popup-content">
+            <h2 id="popup-relevance-title">Industry Relevance</h2>
             <p><strong>Telecom and Network Infrastructure:</strong> Expertise in testing Nokia devices ensures high-speed data transmission and reliability for expanding telecom networks.</p>
             <p><strong>Software Testing for Network Management:</strong> Extensive experience with WS-NOC and NFM-T aligns with the growing need for efficient network operations management systems in the telecom industry.</p>
+            <button class="close-popup" aria-label="Close">Close</button>
         </div>
-    </section> -->
-
-    <section class="tiles-section">
-    <!-- Tile for Professional Summary -->
-    <div class="tile fade-in" data-popup="popup-summary">
-        <h2>Professional Summary</h2>
     </div>
 
-    <!-- Tile for Key Areas of Expertise -->
-    <div class="tile fade-in" data-popup="popup-expertise">
-        <h2>Key Areas of Expertise</h2>
-    </div>
-
-    <!-- Tile for Software Testing -->
-    <div class="tile fade-in" data-popup="popup-software">
-        <h2>Software Testing</h2>
-    </div>
-
-    <!-- Tile for Key Attributes -->
-    <div class="tile fade-in" data-popup="popup-attributes">
-        <h2>Key Attributes</h2>
-    </div>
-
-    <!-- Tile for Industry Relevance -->
-    <div class="tile fade-in" data-popup="popup-relevance">
-        <h2>Industry Relevance</h2>
-    </div>
-</section>
-
-    <!-- Popup Overlays (Hidden by default) -->
-<div class="popup-overlay" id="popup-summary">
-    <div class="popup-content">
-        <h2>Professional Summary</h2>
-        <p>I am an enthusiastic and result-oriented Test Engineer with over three years of professional experience in network and security testing. My expertise spans across product testing for telecom devices and software testing for complex network management systems.</p>
-        <button class="close-popup">Close</button>
-    </div>
-</div>
-
-<div class="popup-overlay" id="popup-expertise">
-    <div class="popup-content">
-        <h2>Key Areas of Expertise</h2>
-        <p>Functional and performance testing for Nokia devices...</p>
-        <button class="close-popup">Close</button>
-    </div>
-</div>
-
-<div class="popup-overlay" id="popup-software">
-    <div class="popup-content">
-        <h2>Software Testing</h2>
-        <p>Monitoring real-time network performance with Grafana...</p>
-        <button class="close-popup">Close</button>
-    </div>
-</div>
-
-<div class="popup-overlay" id="popup-attributes">
-    <div class="popup-content">
-        <h2>Key Attributes</h2>
-                <li>Functional and performance testing for Nokia devices (1830 PSI-CL, 1830 PSI-M).</li>
-                <li>Testing network components for seamless integration and scalability.</li>
-                <li>Ensuring traffic management and bandwidth allocation stability.</li>
-        <button class="close-popup">Close</button>
-    </div>
-</div>
-
-<div class="popup-overlay" id="popup-relevance">
-    <div class="popup-content">
-        <h2>Industry Relevance</h2>
-         <p><strong>Telecom and Network Infrastructure:</strong> Expertise in testing Nokia devices ensures high-speed data transmission and reliability for expanding telecom networks.</p>
-            <p><strong>Software Testing for Network Management:</strong> Extensive experience with WS-NOC and NFM-T aligns with the growing need for efficient network operations management systems in the telecom industry.</p>
-        <button class="close-popup">Close</button>
-    </div>
-</div>
-    
     <!-- Footer -->
     <footer class="footer">
         <p>© 2024 Shri Hari Portfolio</p>
     </footer>
 
 </body>
+
 </html>
