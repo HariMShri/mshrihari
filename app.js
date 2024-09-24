@@ -3,6 +3,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const bgVideo = document.getElementById('bg-video');
     const tiles = document.querySelectorAll('.tile');
 
+    document.querySelector('.tiles-section').addEventListener('click', (event) => {
+    if (event.target.classList.contains('tile')) {
+        const popupId = event.target.getAttribute('data-popup');
+        const popup = document.getElementById(popupId);
+        if (popup) {
+            popup.classList.add('active');
+            trapFocus(popup);
+        }
+    }
+});
+
     // Ensure hero content fades in smoothly
     window.addEventListener('load', () => {
         if (heroContent) {
