@@ -61,4 +61,3 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Error loading navbar:', error);
         document.getElementById('navbar').innerHTML = '<p>Navbar could not be loaded</p>';
     });
-});
