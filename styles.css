@@ -1,3 +1,4 @@
+
 /* Reset */
 * {
     margin: 0;
@@ -124,9 +125,9 @@ body {
 
 /* Tiles Section */
 .tiles-section {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
     padding: 50px 20px;
     background-color: #222;
 }
@@ -135,9 +136,6 @@ body {
     background: #333;
     color: #fff;
     padding: 20px;
-    margin: 20px;
-    width: 300px;
-    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -194,10 +192,12 @@ body {
     transition: opacity 0.5s ease-in-out;
     z-index: 999;
 }
+
 .popup-overlay.active {
     opacity: 1;
     pointer-events: auto;
 }
+
 .popup-content {
     background: #fff;
     color: #333;
@@ -208,17 +208,21 @@ body {
     transform: scale(0.9);
     transition: transform 0.3s ease-in-out;
 }
+
 .popup-overlay.active .popup-content {
     transform: scale(1);
 }
+
 .popup-content h2 {
     margin-bottom: 15px;
     font-size: 1.5rem;
 }
+
 .popup-content p {
     font-size: 1rem;
     margin-bottom: 20px;
 }
+
 .close-popup {
     background: #ff4c4c;
     color: #fff;
@@ -227,9 +231,11 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+
 .close-popup:hover {
     background: #ff7878;
 }
+
 /* Fade-in for Tiles */
 @keyframes fadeIn {
     from {
@@ -241,35 +247,8 @@ body {
         transform: translateY(0);
     }
 }
+
 /* Responsiveness */
-@media (max-width: 768px) {
-    .tile {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    .popup-content {
-        width: 90%;
-    }
-}
-/* Fade-In Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Fade-in for tiles */
-.fade-in {
-    animation: fadeIn 2s ease-in-out forwards;
-}
-
-/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2.5rem;
@@ -294,6 +273,11 @@ body {
     .video-bg-fallback {
         display: block;
     }
+
+    .popup-content {
+        width: 90%;
+    }
+}
 
     .tiles-section {
         flex-direction: column;
@@ -355,6 +339,12 @@ body {
         .highlight-box ul li {
             margin: 10px 0;
         }
+
+@media (max-width: 576px) {
+    .tiles-section {
+        grid-template-columns: 1fr;
+    }
+}
 
         /* Footer */
         .footer {
