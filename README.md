@@ -1,28 +1,30 @@
-# 👋 Hi, I'm Shri Hari M
+# 🌐 API Testing with Postman
 
-🎯 Passionate QA Engineer | Manual + Automation Tester | Cybersecurity Enthusiast  
-💼 Test Engineer at Wipro | Working on Telecom Network Systems  
-🚀 Building skills in Selenium, API Testing, DevOps & Security Testing
+This project contains REST API test cases created using Postman for a sample public API.
 
----
+## 📦 Tools Used
+- Postman
+- Newman (for CLI execution)
+- JSON
 
-## 🔧 Current Learning Path
-- ✅ Java for Test Automation
-- ✅ Selenium WebDriver + TestNG
-- ✅ Postman for API Testing
-- 🔜 Jenkins | GitHub Actions | Security Testing
+## ✅ Test Scenarios
+- GET all users
+- GET user by ID
+- POST create user
+- PUT update user
+- DELETE user
 
----
+## 🚀 How to Run
+1. Import the Postman collection into your Postman app
+2. Use the environment file (if provided)
+3. Run the collection manually or via Newman
 
-## 📂 Projects
-- [Selenium Login Automation](https://github.com/your-username/selenium-login-automation)
-- [Postman API Collection](https://github.com/your-username/api-testing-postman)
-- [Bug Reports & Test Cases](https://github.com/your-username/bug-report-samples)
+## 🧪 Sample Public API Used
+https://reqres.in/
 
----
+## 📂 Project Files
+- `User_API_Test.postman_collection.json`
+- `User_API_Environment.postman_environment.json`
 
-## 📫 Connect with Me
-📧 m.shrihari04@gmail.com  
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/YOUR-PROFILE)
-
-
+## 👨‍💻 Author
+Shri Hari M
